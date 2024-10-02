@@ -1,0 +1,64 @@
+<!--<p>tienda works!</p>-->
+<link rel="stylesheet" href="../../../../css/home.css">
+
+<!--El aparador de la tienda,la primera pagina que ve el cliente al ingresar-->
+<div class="contenedorTienda">
+
+  <!--Apartado de la exposicion de productos-->
+  <div class="contenedorProductos">
+
+    <!--Titulo del apartado-->
+    <div class="encabezados">
+        <h1 class="Examiner">Tienda</h1>
+    </div>
+
+    <!-- Contenedor de productos -->
+    <div class="contenedor-imagenes">
+      <div class="imagen" routerLink="/sr-macondo/productos">
+          <img src="/assets/image/productos.jpg" alt="productos">
+          <div class="texto-centro">Productos</div>
+      </div>
+      <div class="imagen" routerLink="/sr-macondo/menu">
+        <img src="/assets/image/menu.jpg"  alt="">
+        <div class="texto-centro">Menu</div>
+      </div>
+      <div class="imagen" routerLink="/sr-macondo/sucursales">
+        <img src="/assets/image/sucursales.jpg" alt="">
+        <div class="texto-centro">Sucursales</div>
+      </div>
+      <div class="imagen" routerLink="/sr-macondo/juegos">
+        <img src="/assets/image/futbolito.jpg" alt="">
+        <div class="texto-centro">Juegos</div>
+      </div>
+    </div>
+
+
+  </div>
+
+    <!--Apartado lateral donde se estan los botones de acceder a las paginas: acerca de, notificame-->
+    <div class="contenedorLateral">
+        <div class="backgroundTiendaLateral">
+            <div class="subLateralTienda">
+                Bienvenido
+            </div>
+            <div class="botonesLateralesGrupo">
+                <!--Boton que lleva a la pagina acerca de-->
+                <button class="botonLateral" routerLink="/sr-macondo/acerca-de">
+                    <mat-icon>info</mat-icon>
+                    Acerca de
+                </button>
+                <!--Boton que va a el servicio de solicitud de noticias de sr. Macondo-->
+                <button class="botonLateral" routerLink="/sr-macondo/avisame">
+                    <mat-icon>notifications</mat-icon>
+                    Notifícame
+                </button>
+                <button class="botonLateral" routerLink="/sr-macondo/mapa">
+                  <mat-icon>map</mat-icon>
+                 Localizate
+              </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,71 @@
+<!--<p>lista-juego works!</p>-->
+
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div clss="principalContenedor" >
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+        <h1 class="Examiner">Producto</h1>
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/empleado/home-e">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!--Tabla-->
+
+        <div class="contenedorTabla" >
+            <table *ngIf="ListProducto.length > 0" class="styled-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Identificador</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Tipo Producto</th>
+                    <th scope="col">Existencia del producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Descuento Producto</th>
+                    <th scope="col">Sucursal</th>
+                    <th scope="col">Distribuidor</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of ListProducto">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.Nom_Prod }}</td>
+                    <td>{{ item.Tipo_Prod }}</td>
+                    <td>{{ item.Exist_Prod }}</td>
+                    <td>{{ item.Prec_Prod | currency }}</td>
+                    <td>{{ item.Desc_Prod }}</td>
+                    <td>{{ sucursalesMap[item.IDSucursal] }}</td>
+                    <td>{{ distribuidoresMap[item.IDDistribuidor] }}</td>
+                    <td>
+                      <button type="button" class="btn btn-primary btn-success btn-sm" routerLink="/empleado/edit/{{item.id}}">
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                    </td>
+                    <td>
+                      <button (click)="deleteProduct(item.id!)" type="button" class="btn btn-primary btn-danger btn-sm">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+                
+              </table>
+              <h6 *ngIf="ListProducto.length == 0"> Upps! No hay Productos para mostrar</h6>
+        </div>
+        <div>
+            <button class="botonesAgregar" routerLink="/empleado/add">
+                Agregar Producto
+            </button>
+        </div>
+    </div>
+
+</div>
+
+

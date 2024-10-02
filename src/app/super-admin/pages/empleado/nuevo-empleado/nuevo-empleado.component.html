@@ -1,0 +1,142 @@
+<!--<p>nuevo-empleado works!</p>-->
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div clss="principalContenedor">
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+        <h1 class="Examiner"> {{ operacion }} Empleado</h1>
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/super-admin/principal">
+                    <mat-icon>home</mat-icon>
+                </button>
+                <button class="botonNavegacion" routerLink="/super-admin/empleados">
+                    <mat-icon>undo</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!--Contenedor del formulario-->
+
+        <div class="contenedorInfo">
+            <h3 >Datos empleado</h3>
+            <!--Formulario-->
+            <form [formGroup]="formAddEmpleado" (ngSubmit)="agregarEmpleado()">
+                <!--Nombre del empleado-->
+                <div class="mb-3">
+                    <label for="Emp_Nom" class="form-label">Nombre(s)</label>
+                    <input formControlName="Emp_Nom" type="text" class="form-control" id="Emp_Nom" placeholder="Ingresa nombre del empleado">
+                    <samp *ngIf="(formAddEmpleado.get('Emp_Nom')?.hasError('required') || formAddEmpleado.get('Emp_Nom')?.hasError('minlength') ) && formAddEmpleado.get('Emp_Nom')?.touched" class="requerimientosError">
+                        * El campo nombre es requerido
+                    </samp>
+                    <samp *ngIf="formAddEmpleado.get('Emp_Nom')?.hasError('maxlength')">
+                      * No debe exceder los 30 caracteres
+                    </samp>
+                </div>
+                <!--Apellido paterno-->
+                <div class="mb-3">
+                    <label for="Ape_Pat" class="form-label">Apellido paterno</label>
+                    <input formControlName="Ape_Pat" type="text" class="form-control" id="Ape_Pat" placeholder="Ingresa apellido paterno del empleado">
+                    <samp *ngIf="(formAddEmpleado.get('Ape_Pat')?.hasError('required') || formAddEmpleado.get('Ape_Pat')?.hasError('minlength')) && formAddEmpleado.get('Ape_Pat')?.touched" class="requerimientosError">
+                        * El campo apellido paterno es requerido
+                    </samp>
+                    <samp *ngIf="formAddEmpleado.get('Ape_Pat')?.hasError('maxlength')">
+                      * No debe exceder los 20 caracteres
+                    </samp>
+                </div>
+                <!--Apellido Materno-->
+                <div class="mb-3">
+                    <label for="Ape_Mat" class="form-label">Apellido materno</label>
+                    <input formControlName="Ape_Mat" type="text" class="form-control" id="Ape_Mat" placeholder="Ingresa apellido materno del empleado">
+                    <samp *ngIf="(formAddEmpleado.get('Ape_Mat')?.hasError('required') || formAddEmpleado.get('Ape_Mat')?.hasError('minlength') ) && formAddEmpleado.get('Ape_Mat')?.touched" class="requerimientosError">
+                        * El campo apellido materno es requerido
+                    </samp>
+                    <samp *ngIf="formAddEmpleado.get('Ape_Mat')?.hasError('maxlength')">
+                      * No debe exceder los 20 caracteres
+                    </samp>
+                </div>
+                <!--Edad del empleado-->
+                <div class="mb-3">
+                    <label for="Edad" class="form-label">Edad</label>
+                    <input formControlName="Edad" type="number" class="form-control" id="Edad" placeholder="Ingresa edad del empleado">
+                    <samp *ngIf="formAddEmpleado.get('Edad')?.hasError('required') && formAddEmpleado.get('Edad')?.touched" class="requerimientosError">
+                        * El campo edad es requerido
+                    </samp>
+                    <samp *ngIf="formAddEmpleado.get('Ape_Pat')?.hasError('max') || formAddEmpleado.get('Ape_Pat')?.hasError('min') ">
+                      * La edad tiene que ser entre 15 y los 99 años
+                    </samp>
+                </div>
+                <!--Telefono-->
+                <div class="mb-3">
+                    <label for="Emp_Telefono" class="form-label">Telefono</label>
+                    <input formControlName="Emp_Telefono" type="text" class="form-control" id="Emp_Telefono" placeholder="Ingresa telefono del empleado">
+                    <samp *ngIf="(formAddEmpleado.get('Emp_Telefono')?.hasError('required') || formAddEmpleado.get('Emp_Telefono')?.hasError('minlength')) && formAddEmpleado.get('Emp_Telefono')?.touched" class="requerimientosError">
+                        * El campo telefono es requerido
+                    </samp>
+                    <samp *ngIf="formAddEmpleado.get('Emp_Telefono')?.hasError('maxlength')">
+                      * No debe exceder los 10 caracteres
+                    </samp>
+                </div>
+                <!--Email-->
+                <div class="mb-3">
+                    <label for="Emp_Email" class="form-label">Email</label>
+                    <input formControlName="Emp_Email" type="email" class="form-control" id="Emp_Email" placeholder="Ingresa email del empleado">
+                    <samp *ngIf="(formAddEmpleado.get('Emp_Email')?.hasError('required') || formAddEmpleado.get('Emp_Email')?.hasError('minlength')) && formAddEmpleado.get('Emp_Email')?.touched" class="requerimientosError">
+                        * El campo email es requerido
+                    </samp>
+                    <samp *ngIf="formAddEmpleado.get('Emp_Email')?.hasError('maxlength') || formAddEmpleado.get('Emp_Email')?.hasError('email') ">
+                      * No debe exceder los 50 caracteres y debe ser un correo valido
+                    </samp>
+                </div>
+                <!--Password para acceso a app de sr macondo-->
+                <div class="mb-3">
+                    <label for="Contrasenia" class="form-label">Contraseña</label>
+                    <input formControlName="Contrasenia" type="text" class="form-control" id="Contrasenia" placeholder="Ingresa contraseña de inicio de sesión">
+                    <samp *ngIf="(formAddEmpleado.get('Contrasenia')?.hasError('required') || formAddEmpleado.get('Contrasenia')?.hasError('minlength')) && formAddEmpleado.get('Contrasenia')?.touched" class="requerimientosError">
+                        * El campo contrasenia es requerido
+                    </samp>
+                    <samp *ngIf="formAddEmpleado.get('Contrasenia')?.hasError('maxlength')">
+                      * No debe exceder los 20 caracteres
+                    </samp>
+                </div>
+                <!--Estado del empleado-->
+                <div>
+                    <label class="form-label">Estado del empleado</label>
+                    <select formControlName="Estado" class="selectorSA">
+                        <option value="" disabled>Selecione un estado</option>
+                        <option value="true">Presente</option>
+                        <option value="false">Ausente</option>
+                    </select>
+                </div>
+                <!--Rol del empleado-->
+                <div>
+                    <label class="form-label">Rol del empleado</label>
+                    <select formControlName="IDRol" class="selectorSA">
+                        <option value="" disabled>Selecione un rol</option>
+                        <option *ngFor="let item of roles" [value]="item.id">{{item.Nom_Rol}}</option>
+                    </select>
+                </div>
+                <!--Sucursal-->
+                <div>
+                    <label class="form-label">Sucursal de trabajo</label>
+                    <select formControlName="IDSucursal" class="selectorSA">
+                        <option value="" disabled>Selecione una sucursal</option>
+                        <option *ngFor="let item of sucursales" [value]="item.id">{{item.Nom_Suc}}</option>
+                        <!--<option *ngFor="let sucursal of sucursales" [value]="sucursal.id">{{sucursal.sucursal}}</option>-->
+                    </select>
+                </div>
+
+                <div class="grupoBotones">
+                  <button [disabled]="formAddEmpleado.invalid" type="submit" class="botonAgreMod">Guardar</button>
+                </div>
+
+            </form>
+        </div>
+        <!--Botones para guardar la informacion del empleado-->
+    </div>
+
+</div>
+<div>
+    <p>Empleados</p>
+</div>

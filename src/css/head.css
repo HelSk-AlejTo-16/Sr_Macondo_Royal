@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teachers&display=swap');
+@import url('https://db.onlinewebfonts.com/c/e785a7f1d551f5d098f780bbd15e1ef3?family=Examiner+NF+W01+Bold');
+
+/*Para el titulo de cada encabezado*/
+#tituloMacondo {
+    color:rgb(46, 22, 7);
+    font-size: 2.2rem;
+    display: inline;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+
+/*el subtitulo del encabezado*/
+#indiceMacondo {
+    color:rgb( 255, 255,255);
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    display: inline;
+}
+
+/*Fuente del indiceMacondo*/
+.balsamiq-sans-regular {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/*Fuente que se pensaba usar*/
+.teachers {
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+.Examiner {
+  font-family: 'Examiner NF W01 Bold','ExaminerNFW01-Bold','Livvic', sans-serif;
+  }
+
+/*El fondo de encabezado*/
+.NavMacondo {
+  background-color: rgb(8,125,107);
+  padding: 0.5rem;
+  display:flex;
+  position: relative;
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  }
+
+/*Boton de acceso*/
+.buttonIngresar {
+  margin-left: auto;
+  margin-right: 2rem;
+  width: 6rem; /* Establece el ancho deseado */
+  height: 2.5rem; /* Establece la altura deseada */
+  font-size: 1rem; /* Ajusta el tamaño del texto si es necesario */
+  background-color:  rgb(10, 94, 81); /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Elimina el borde por defecto */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  }
+
+/*Boton ingresar cuando se selecciona*/
+.buttonIngresar:hover {
+  background-color: rgb(70, 46, 31);
+  }
+
+/*Fondo de la pagina*/
+#fondo {
+  /*background-image: url('https://th.bing.com/th/id/R.ff6867753509b17e13cc921b47cccc0a?rik=yvrui%2boGJEdhqQ&pid=ImgRaw&r=0');*/
+  /*background-image: url('https://i.pinimg.com/736x/c5/e5/21/c5e521ba1f22c297f0e909dff399a152.jpg');*/
+  /*background-image: url('/assets/image/bitmap.png');*/
+  /*background-image: url('/assets/image/WitheColor.png');
+  background-image: url('/assets/image/brown.png');
+  background-image: url('/assets/image/dark.png');
+  background-image: url('/assets/image/dem.png');*/
+  background-image: url('/assets/image/AllColorCrema.png');
+  background-attachment: fixed;
+  /*background-position: center center;*/
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+/*Fondo de la pagina*/
+#fondoV2 {
+  /*background-image: url('https://th.bing.com/th/id/R.ff6867753509b17e13cc921b47cccc0a?rik=yvrui%2boGJEdhqQ&pid=ImgRaw&r=0');*/
+  /*background-image: url('https://i.pinimg.com/736x/c5/e5/21/c5e521ba1f22c297f0e909dff399a152.jpg');*/
+  /*background-image: url('/assets/image/bitmap.png');*/
+  /*background-image: url('/assets/image/WitheColor.png');
+  background-image: url('/assets/image/brown.png');
+  background-image: url('/assets/image/dark.png');
+  background-image: url('/assets/image/dem.png');*/
+  background-image: url('/assets/image/AllColorCrema.png');
+  background-attachment: fixed;
+  /*background-position: center center;*/
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+/*pie de pagina*/
+.footer {
+  background-color: rgb(8, 125, 107); /* Color de fondo del pie de página */
+  color: white; /* Color del texto del pie de página */
+  padding: 0.5rem; /* Relleno interno del pie de página */
+  text-align: center; /* Centra el texto dentro del pie de página */
+  margin-bottom: 0; /* Margen entre el pie de página y el resto del contenido */
+  /*margin-top: 1rem; /* Empuja el pie de página hacia la parte inferior de la página */
+}
+
+/*Imagen del logo*/
+.SrMacondoLogo {
+  width: 3rem;  /* Ancho de la imagen */
+  height: 3rem; /* Altura de la imagen */
+  object-fit: contain; /* Escala la imagen para que encaje dentro del contenedor sin recortarla */
+}

@@ -1,0 +1,44 @@
+/* Estilos para el contenedor de tarjetas */
+.card-container {
+    display: flex; /* Usa flexbox para alinear las tarjetas en una fila */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila si el espacio es insuficiente */
+    justify-content: space-around; /* Espacia las tarjetas equitativamente */
+    padding: 1rem;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 1rem;
+    width: 250px; /* Ancho fijo para todas las tarjetas */
+    height: 350px; /* Altura fija para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.card-image {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 150px; /* Altura fija para las imágenes */
+    object-fit: contain; /* Mantiene la proporción de la imagen sin recortar */
+}
+
+/* Estilos para el cuerpo de la tarjeta */
+.card-body {
+    padding: 1rem;
+    flex-grow: 1; /* Permite que el cuerpo de la tarjeta crezca para llenar el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos para el pie de página de la tarjeta */
+.card-footer {
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    text-align: center;
+}

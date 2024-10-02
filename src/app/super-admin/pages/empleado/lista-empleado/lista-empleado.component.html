@@ -1,0 +1,67 @@
+<!--<p>lista-empleado works!</p>-->
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div clss="principalContenedor">
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+        <h1 class="Examiner"> Empleados</h1>
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/super-admin/principal">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!--Tabla-->
+        <div class="contenedorTabla">
+          <table *ngIf="listEmpleado.length > 1" class="styled-table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre completo</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Edad</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Actividades</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of listEmpleado">
+                  <td *ngIf="item.id != 1">{{ item.id }}</td>
+                  <td *ngIf="item.id != 1">{{ item.Emp_Nom }} {{ item.Ape_Pat }} {{ item.Ape_Mat }}</td>
+                  <td *ngIf="item.id != 1">{{ item.Emp_Telefono }}</td>
+                  <td *ngIf="item.id != 1">{{ item.Emp_Email }}</td>
+                  <td *ngIf="item.id != 1">{{ item.Edad }}</td>
+                  <td *ngIf="item.id != 1">{{ item.Estado ? 'Presente' : 'Ausente' }}</td>
+                  <td *ngIf="item.id != 1">
+                    <div class="contenedorUD">
+                      <button routerLink="/super-admin/empleado/{{item.id}}" class="botonEditData">
+                        <mat-icon>edit</mat-icon>
+                      </button>
+
+                      <button (click)="deleteEmpleado(item.id!)" class="botonEliminar">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h6 *ngIf="listEmpleado.length == 1">Upps! No hay empleados para mostrar</h6>
+      </div>
+        <div>
+            <button class="botonesAgregar" routerLink="/super-admin/nuevo-empleado">
+                Agregar Empleado
+            </button>
+        </div>
+    </div>
+
+</div>
+<div>
+    <p>Empleados</p>
+</div>
+
+

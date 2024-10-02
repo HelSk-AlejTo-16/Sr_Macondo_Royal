@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teachers&display=swap');
+@import url('https://db.onlinewebfonts.com/c/e785a7f1d551f5d098f780bbd15e1ef3?family=Examiner+NF+W01+Bold');
+
+/******************* Fuentes *******************/
+/*Fuente de los subtitulos*/
+.balsamiq-sans-regular {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: rgb(46, 22, 7);
+  }
+
+/*Titulos de los encabezados*/
+.ExaminerOrigin {
+    font-family: 'Examiner NF W01 Bold','Livvic';
+    letter-spacing: 0.1rem;
+  }
+
+/*Titulo de acceder*/
+.Examiner {
+  font-family: 'Examiner NF W01 Bold','Livvic';
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  color: rgb(46, 22, 7);
+}
+
+/*Titulo de acceder*/
+.ExaminerError {
+  font-family: 'Examiner NF W01 Bold','Livvic';
+  width: 100%;
+  letter-spacing: 0.1rem;
+  color: rgb(46, 22, 7);
+}
+
+/******************* Fondos *******************/
+/*Fondo de acceder*/
+.backgroundAcceder {
+  display: flex; /* Utiliza Flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa todo el alto de la ventana */
+  background: url('https://th.bing.com/th/id/R.621796c8c5c215defa9efbd26ab2eee5?rik=4sCdBE0RVllRzg&pid=ImgRaw&r=0') no-repeat center center fixed; /* Imagen de fondo */
+  background-size: cover; /* La imagen de fondo cubre toda la pantalla */
+}
+
+/******************* Contenedores *******************/
+
+/*Contenedor del formulario para acceder*/
+.contenidoAcceder {
+  background: rgba(255, 255, 255); /* Fondo blanco semitransparente */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+  display: flex; /* Utiliza Flexbox para el contenido interno */
+  align-items: center; /* Alinea el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+/* Contenedor del contenido del cuadro de inicio de sesión */
+.contenedorAcceder {
+  display: flex; /* Flexbox para alinear imagen y formulario */
+  align-items: center; /* Alinea verticalmente */
+}
+
+/* Formulario de acceder */
+.contenedorFormulario {
+  display: flex; /* Flexbox para el formulario */
+  flex-direction: column; /* Alinea los elementos del formulario en columna */
+}
+
+/* Contenedor principal que centra el contenido de error 404*/
+.errorContenedor {
+  display: flex; /* Utiliza Flexbox para alinear los elementos */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa todo el alto de la ventana */
+  text-align: left; /* Alinea el texto a la izquierda */
+  background-color: rgb(255, 255, 255);
+}
+
+/* Contenedor para el texto de error */
+.errorTexto {
+  display: flex; /* Utiliza Flexbox para alinear el texto */
+  flex-direction: column; /* Alinea el texto en columna */
+  justify-content: center; /* Centra el texto verticalmente */
+}
+
+
+/******************* Botones *******************/
+
+/* Botón de envío del formulario */
+.botonAcceder {
+  padding: 10px; /* Espaciado interno */
+  background-color: #50280d; /* Color de fondo azul */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  color: white; /* Color del texto blanco */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8rem;
+}
+
+/* Efecto hover para el botón */
+.botonAcceder:hover {
+  background-color: rgb(12, 85, 67); /* Color de fondo azul más oscuro al pasar el cursor */
+}
+
+
+/******************* Imagenes *******************/
+
+/* Estilos para la imagen de inicio de sesión */
+.imagenSrMacondo {
+  width: 300px; /* Ancho de la imagen */
+  height: 300px; /* Altura de la imagen */
+  margin-right: 20px; /* Espaciado a la derecha de la imagen */
+}
+
+/* Estilos para la imagen de error */
+.errorImagen {
+  width: 10rem; /* Ancho de la imagen */
+  height: 10rem; /* Altura de la imagen */
+  margin-right: 1rem; /* Espaciado a la derecha de la imagen */
+}
+
+/******************* Formulario *******************/
+
+/* Campos de entrada del formulario */
+.formControl {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye el borde en el tamaño total */
+  margin: 0.5rem;
+}
+
+/* Estilo para el placeholder del campo de entrada */
+.formControl::placeholder {
+  color: rgb(125, 118, 108); /* Color del placeholder */
+  opacity: 1; /* Opacidad completa */
+}
+
+/* Estilo para el campo de entrada cuando está enfocado */
+.formControl:focus {
+  color: rgb(87, 78, 73); /* Color del texto */
+  background-color: rgb(255, 237, 224); /* Color de fondo */
+  border-color: rgb(228, 144, 112); /* Color del borde */
+  outline: 0; /* Sin contorno */
+  box-shadow: 0 0 0 0.2rem rgba(255, 115, 0, 0.25); /* Sombra */
+}

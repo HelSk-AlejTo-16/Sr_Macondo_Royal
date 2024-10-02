@@ -1,0 +1,28 @@
+<!--<p>acceder works!</p>-->
+<link rel="stylesheet" href="../../../css/componentes.css">
+
+<!--Contenedor con el fondo-->
+<div class="backgroundAcceder">
+    <!--Contenedor con la informacion para acceder-->
+    <div class="contenidoAcceder">
+        <!--Contenedor del contenido, distribuye los elementos-->
+        <div class="contenedorAcceder">
+            <!--Imagen con el logo de SrMacondo-->
+            <img src="https://i.pinimg.com/736x/21/75/ac/2175ac900c002565cbc172edf0e940cc.jpg" alt="Imagen" class="imagenSrMacondo">
+
+            <form [formGroup]="formUsuario" (ngSubmit)="login()" class="contenedorFormulario">
+                <h2 class="Examiner">Iniciar Sesión</h2>
+
+                <div>
+                    <label for="username">Usuario</label>
+                    <input formControlName="username" type="text" id="username" class="formControl" placeholder="Ingresa tu usuario">
+                </div>
+                <div>
+                    <label for="password">Contraseña</label>
+                    <input formControlName="password" type="password" id="password" class="formControl" placeholder="Ingresa tu contraseña">
+                </div>
+                <button type="submit" class="botonAcceder" (click)="login()">Acceder</button>
+            </form>
+        </div>
+    </div>
+</div>

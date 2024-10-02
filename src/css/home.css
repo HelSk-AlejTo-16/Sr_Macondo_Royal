@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teachers&display=swap');
+@import url('https://db.onlinewebfonts.com/c/e785a7f1d551f5d098f780bbd15e1ef3?family=Examiner+NF+W01+Bold');
+
+
+/******************* Fondos *******************/
+
+/*Fondo de paginas Home*/
+.backgroundHome {
+    padding: 40px;
+    overflow-y: auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.815);
+  }
+
+
+
+
+/******************* Contenedores *******************/
+
+/*Contenedor de las listas*/
+.contenedorLista {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  margin-top: 0.5rem;
+  padding: 2rem;
+}
+
+/*Contenedor de los apartados de tienda*/
+.contenedorTienda {
+    display: flex;
+    height: 37rem;
+    margin-top: 0.5rem;
+
+}
+
+/*Contenedor de los apartados de la tienda y los productos*/
+.contenedorProductos {
+    flex-direction: column;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: rgba(252, 252, 252, 0.897);
+    width: 64rem;
+    height: 32rem;
+    margin: 2rem;
+}
+
+/*Contenedor de la lista de productos*/
+.contenedorProductos {
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgba(252, 252, 252, 0.897);
+  max-width: 60rem;
+  min-height: 32rem;
+  margin: 2rem;
+}
+
+/*Contenedor de la barra lateral de tienda*/
+.contenedorLateral {
+    display: flex;
+    position: relative;
+    background-color: rgb(8, 125, 107);
+    width: 13rem;
+    height: 32rem;
+    right: -65rem;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    left:5rem
+
+
+
+  }
+
+
+/* Estilos para el contenedor de tarjetas */
+.contenedorCard {
+    display: flex; /* Usa flexbox para alinear las tarjetas en una fila */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila si el espacio es insuficiente */
+    justify-content: space-around; /* Espacia las tarjetas equitativamente */
+    padding: 1rem;
+}
+
+.botonesLateralesGrupo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2rem;
+  }
+
+/*Contenedor de los apartados de la paginas home acerca de y producto*/
+.contenedorHome {
+    display: flex;
+    width: 100%;
+    height: 35rem;
+    margin-top: 0.5rem;
+    padding: 2rem;
+}
+
+/*Contenedor de los apartados de la paginas avisame*/
+.contenedorAvisame {
+    display: flex;
+    width: 100%;
+    height: 39rem;
+    margin-top: 0.5rem;
+    padding: 2rem;
+}
+
+/*Contenedor de los cuadros de texto con info del banco*/
+.contenedorAcercaDe {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px; /* Espacio entre los párrafos */
+  }
+
+/*Cuadros div con info del banco*/
+.cuadroBanco {
+    width: 30rem;
+    height: auto;
+    margin-left: 6rem;
+  }
+
+/*Contenedores del div*/
+.contenedorDiv {
+    display: flex;
+    gap: 20px; /* Espacio entre los divs */
+    align-items: center;
+  }
+  .contenedoDiv{
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 100%; /* Asegura que el contenedor ocupe el ancho total */
+    height: auto; /* Permite que el contenedor ajuste su altura automáticamente */
+  }
+  app-map-screen {
+    width: 100%; /* Asegura que el componente ocupe el 100% del ancho del contenedor */
+    height: auto; /* Ajusta la altura de acuerdo al contenido */
+}
+/*Contenedor de los botones para regresar de las paginas de home*/
+.contenedorRegresar {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    gap: 10px; /* Espacio entre los botones */
+  }
+
+
+/*Contenedor extenso donde se gestiona el apartado del formulario*/
+.contenedorEmail {
+    gap: 20px; /* Espacio entre los divs */
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 40rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border: 0.3rem dashed rgb(235, 166, 124);
+    border-radius: 10px;
+    background-color: rgb(255, 250, 244);
+  }
+
+.contenedorGuardar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+/******************* Fuentes *******************/
+
+/*Fuente de los subtitulos*/
+.balsamiq-sans-regular {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: rgb(46, 22, 7);
+  }
+
+/*Titulos de los encabezados*/
+.Examiner {
+    font-family: 'Examiner NF W01 Bold','ExaminerNFW01-Bold', 'Livvic', sans-serif;
+    letter-spacing: 0.3rem;
+  }
+
+/*Subtitulo de la barra lateral*/
+.subLateralTienda {
+    font-family: 'Examiner NF W01 Bold','ExaminerNFW01-Bold', 'Livvic';
+    /*color: rgb(61, 22, 8); */
+    color: rgb( 255, 255,255);
+    font-size: 2rem;
+  }
+
+
+
+
+/******************* Botones *******************/
+
+/*Ver mas de la pagina de tienda*/
+.botonVerMas{
+    width: 7rem; /* Establece el ancho deseado */
+    height: 3rem; /* Establece la altura deseada */
+    font-size: 1.2rem; /* Ajusta el tamaño del texto si es necesario */
+    background-color:  rgb(179, 143, 117); /* Color de fondo del botón */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255); /* Color del texto */
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    margin: 1rem;
+    pad: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.botonVerMas:hover{
+    background-color:  rgb(71, 31, 19); /* Color de fondo del botón */
+}
+
+  /*Botones laterales de tienda*/
+.botonLateral {
+    margin: 0.5;
+    width: 9rem; /* Establece el ancho deseado */
+    height: 2.5rem; /* Establece la altura deseada */
+    color:  rgb(255, 247, 241); /* Color de fondo del botón */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgb(46, 22, 7); /* Color del texto */
+
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 8px; /* Espaciado entre el icono y el texto */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border: none; /* Opcional: Elimina el borde del botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 4px; /* Borde redondeado */
+    transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+.botonLateral mat-icon {
+    font-size: 20px; /* Tamaño del icono */
+}
+.botonLateral:hover {
+    background-color: rgb(83, 50, 30);
+    color:rgb( 255, 255,255);
+  }
+
+/*Botones de navegacion de las paginas home que no son la tienda*/
+.botonNavegacion {
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgb(46, 22, 7);
+    color:  rgb(255, 247, 241);
+    border: none; /* Opcional: Elimina el borde del botón */
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 4px; /* Borde redondeado */
+    transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+.botonNavegacion mat-icon {
+    font-size: 20px; /* Tamaño del icono */
+}
+.botonNavegacion:hover {
+    background-color: rgb(83, 50, 30);
+}
+
+/*Boton guardar de Avisame*/
+.botonGuardar {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    width: 7rem;
+    height: 2.5rem;
+    background-color: rgb(46, 22, 7);
+    border: none;
+    color:  rgb(255, 247, 241);
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 4px; /* Borde redondeado */
+    transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+.botonGuardar:hover {
+    background-color: rgb(30, 83, 63);
+}
+
+
+  /*Botones laterales de tienda*/
+  .botonRegresar {
+    margin: 0.5;
+    width: 9rem; /* Establece el ancho deseado */
+    height: 2.5rem; /* Establece la altura deseada */
+    color:  rgb(255, 247, 241); /* Color de fondo del botón */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgb(33, 38, 111); /* Color del texto */
+
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 8px; /* Espaciado entre el icono y el texto */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border: none; /* Opcional: Elimina el borde del botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 4px; /* Borde redondeado */
+    transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+.botonRegresar mat-icon {
+    font-size: 20px; /* Tamaño del icono */
+}
+.botonRegresar:hover {
+    background-color: rgb(64, 93, 180);
+    color:rgb( 255, 255,255);
+  }
+
+/******************* Mas clases *******************/
+
+/*Encabezados con el titulo de la pagina*/
+.encabezados {
+    text-align: center;
+ }
+
+/*Encabezados para producto y lista*/
+.encabezadoProducto {
+  text-align: center;
+  font-size: 3rem;
+}
+
+/*Longitudes de la imagen del qr*/
+.imagenQr {
+  width: 10rem; /* La imagen ocupa el 100% del ancho del contenedor padre */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-height: 9rem; /* Altura máxima de la imagen */
+  object-fit: cover; /* Ajusta la imagen para que cubra el área de la imagen */
+  margin: 10px; /* Margen alrededor de la imagen */
+}
+
+/*Longitudes de la imagen de cada card*/
+.card-image {
+    width: 90%; /* La imagen ocupa el 100% del ancho del contenedor padre */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 9rem; /* Altura máxima de la imagen */
+    object-fit: cover; /* Ajusta la imagen para que cubra el área de la imagen */
+    margin: 10px; /* Margen alrededor de la imagen */
+  }
+
+/* Estilos para el separador */
+.separador {
+    border-top: 2px solid #793a2b; /* Línea del separador */
+    margin: 1rem 0; /* Espacio alrededor del separador */
+}
+
+/*Estilos para los parrafos*/
+.justificado {
+    text-align: justify;
+}
+
+.centrado {
+    text-align: center;
+
+}
+
+/*Recuadros con informacion bancaria*/
+.recuadro {
+    padding: 8px;
+    border: 2px solid #885200; /* Borde punteado de 3px de ancho y color azul */
+    border-radius: 10px;
+    background-color: #faece0;
+    color: #6b3400; /* Color del texto */
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  .contenedor-imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 1rem;
+  }
+
+  .imagen {
+    position: relative;
+    cursor: pointer; /* Hace que el cursor cambie al puntero de mano */
+    aspect-ratio: 16 / 9; /* Define una proporción rectangular */
+    overflow: hidden;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que llene el contenedor sin deformarse */
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .imagen:hover {
+    transform: scale(1.02); /* Aumenta el tamaño de la imagen */
+  }
+
+  .imagen:hover img {
+    filter: brightness(0.7); /* Oscurece la imagen */
+  }
+
+  .texto-centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: clamp(12px, 2vw, 24px); /* Texto ajustable */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombras para mejorar la visibilidad */
+  }
+
+  /* Ajuste responsivo para pantallas más pequeñas */
+  @media (max-width: 600px) {
+    .contenedor-imagenes {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+
+
+  .contenedorCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: none;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px; /* Tamaño máximo de cada card */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px; /* Tamaño máximo para la imagen */
+    object-fit: cover; /* Mantiene las proporciones de la imagen sin deformarse */
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .card-footer {
+    padding: 10px;
+    text-align: right;
+    font-size: 0.9rem;
+    background-color: rgb(163, 216, 220);
+  }
+
+  .text-body-secondary {
+    color: rgb(255, 255, 255);
+  }

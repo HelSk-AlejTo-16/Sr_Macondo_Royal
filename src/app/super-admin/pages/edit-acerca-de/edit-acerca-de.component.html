@@ -1,0 +1,80 @@
+<!--<p>edit-acerca-de works!</p>-->
+<link rel="stylesheet" href="../../../../css/sa-contenido.css">
+
+<div class="principalContenedor">
+  <!--Fondo de color-->
+  <div class="fondoSA">
+    <!--Titulo-->
+    <h1 class="Examiner">Editar Información</h1>
+    <!--Botones de navegación-->
+    <div class="contenedorBotones">
+      <div class="grupoBotones">
+        <button class="botonNavegacion" routerLink="/super-admin/principal">
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+    </div>
+    <!--Contenedor de la información-->
+    <div class="contenedorAD">
+      <form [formGroup]="formDato" (ngSubmit)="editarDato()">
+        <div>
+          <label class="form-label">Banco:</label>
+          <input formControlName="Banc_Nom" type="text" id="Banc_Nom" class="form-control" placeholder="Agrega el nombre del banco">
+          <samp *ngIf="formDato.get('Banc_Nom')?.hasError('required') && formDato.get('Banc_Nom')?.touched">
+            * Se requiere el nombre del banco
+          </samp>
+          <samp *ngIf="formDato.get('Banc_Nom')?.hasError('maxlength')">
+            * No debe exceder los 30 caracteres
+          </samp>
+        </div>
+
+        <div>
+          <label class="form-label">Cuenta interbancaria:</label>
+          <input formControlName="Clabe_InterBanc" type="text" id="Clabe_InterBanc" class="form-control" placeholder="Agregar una clabe interbancaria">
+          <samp *ngIf="formDato.get('Clabe_InterBanc')?.hasError('required') && formDato.get('Clabe_InterBanc')?.touched">
+            * Se requiere la clabe interbancaria
+          </samp>
+          <samp *ngIf="formDato.get('Clabe_InterBanc')?.hasError('maxlength')">
+            * No debe exceder los 18 caracteres, deben ser numéricos sin guiones, puntos, etc.
+          </samp>
+        </div>
+
+        <div>
+          <label class="form-label">Número de cuenta:</label>
+          <input formControlName="Num_Cuenta" type="text" class="form-control" placeholder="Agregar número de cuenta">
+          <samp *ngIf="formDato.get('Num_Cuenta')?.hasError('required') && formDato.get('Num_Cuenta')?.touched">
+            * Se requiere el número de cuenta
+          </samp>
+          <samp *ngIf="formDato.get('Num_Cuenta')?.hasError('maxlength')">
+            * No debe exceder los 10 caracteres numéricos
+          </samp>
+        </div>
+
+        <div>
+          <label class="form-label">URL de la imagen del código QR:</label>
+          <input formControlName="Img_QR" type="text" id="Img_QR" class="form-control" placeholder="URL de QR">
+          <samp *ngIf="formDato.get('Img_QR')?.hasError('maxlength')">
+            * No debe exceder los 300 caracteres
+          </samp>
+        </div>
+
+        <div>
+          <label class="form-label">Historia de la Empresa:</label>
+          <textarea formControlName="Info_Empresa" type="text" id="Info_Empresa" class="form-control" placeholder=""></textarea>
+          <samp *ngIf="formDato.get('Info_Empresa')?.hasError('maxlength')">
+            * No debe exceder los 30000 caracteres
+          </samp>
+        </div>
+
+        <button [disabled]="formDato.invalid" type="submit" class="botonGuardar">
+          <mat-icon>save</mat-icon>
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 3rem;">
+  <p>Edición</p>
+</div>

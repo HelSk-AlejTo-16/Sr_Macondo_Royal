@@ -1,0 +1,64 @@
+<!--<p>lista-juego works!</p>-->
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div clss="principalContenedor">
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+        <h1 class="Examiner">Juegos</h1>
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/empleado/home-e">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!--Tabla-->
+        <div class="contenedorTabla">
+
+            <table *ngIf="listJuego.length > 0" class="styled-table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Juego</th>
+                    <th scope="col">Precio en pesos</th>
+                    <th scope="col">Tiempo de renta</th>
+                    <th scope="col">Disponibilidad</th>
+                    <th scope="col"></th>
+                    
+
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr *ngFor="let item of listJuego">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.Nom_Jueg }}</td>
+                    <td>{{ item.Precio }}</td>
+                    <td>{{ item.Tiempo }}</td>
+                    <td>{{ item.Dispon_Jueg? 'Disponible' : 'No Disponible' }}</td>
+                    <td><div class="contenedorUD">
+                      <button *ngIf="item.id !== undefined" (click)="marcarDesocupado(item.id!)" class="botonEditData">
+                        <mat-icon>cancel_presentation</mat-icon>
+                      </button>
+                      <button *ngIf="item.id !== undefined" (click)="marcarOcupado(item.id!)" class="botonEditData">
+                        <mat-icon>check_circle</mat-icon>
+                      </button>
+                      
+                      
+                      </div>
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+              <h6 *ngIf="listJuego.length == 0">Upps! No hay sucursales para mostrar</h6>
+        </div>
+
+    </div>
+
+</div>
+<div>
+    <p>juegos</p>
+</div>

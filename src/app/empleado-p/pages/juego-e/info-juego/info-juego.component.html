@@ -1,0 +1,85 @@
+<!--<p>nuevo-juego works!</p>-->
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div clss="principalContenedor">
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+        <h1 class="Examiner">{{ operacion }} Juego</h1>
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/empleado/home-e">
+                    <mat-icon>home</mat-icon>
+                </button>
+                <button class="botonNavegacion" routerLink="/empleado/productos-e">
+                    <mat-icon>undo</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!--Contenedor del formulario-->
+          <div class="contenedorInfo">
+            <h3 >Datos de sucursal</h3>
+
+            <form [formGroup]="formAddJuego" (ngSubmit)="agregarJuego()">
+
+              <div class="mb-3">
+                <label for="Nom_Jueg" class="form-label">Nombre Juego</label>
+                <input formControlName="Nom_Jueg" type="text" class="form-control" id="Nom_Jueg" placeholder="Ingresar el nombre del juego" readonly>
+                <samp *ngIf="formAddJuego.get('Nom_Jueg')?.hasError('required') && formAddJuego.get('Nom_Jueg')?.touched">
+                    * Se requiere un nombre para el <strong>juego</strong>
+                </samp>
+              </div>
+
+              <div class="mb-3">
+                <label for="Precio" class="form-label">Precio</label>
+                <input formControlName="Precio" type="numbers" class="form-control" id="Precio" placeholder="Ingresar el precio del costo de la renta" readonly>
+                <samp *ngIf="formAddJuego.get('Precio')?.hasError('required') && formAddJuego.get('Precio')?.touched">
+                    * Se requiere un precio para el <strong>juego</strong>
+                </samp>
+              </div>
+
+              <div class="mb-3">
+                <label for="Tiempo" class="form-label">Tiempo de renta</label>
+                <input formControlName="Tiempo" type="text" class="form-control" id="Tiempo" placeholder="Ingresar el tiempo de renta del juego correspondiente al precio" readonly>
+                <samp *ngIf="formAddJuego.get('Tiempo')?.hasError('required') && formAddJuego.get('Tiempo')?.touched">
+                    * Se requiere un tiempo de renta para el <strong>juego</strong>
+                </samp>
+              </div>
+
+              <div class="mb-3">
+                <label for="Dispon_Jueg" class="form-label">Disponibilidad de juego</label>
+                <select formControlName="Dispon_Jueg" class="form-control" id="Dispon_Jueg">
+                    <option value="" disabled selected>Seleccione una disponibilidad de juego</option>
+                    <option value="true">Disponible</option>
+                    <option value="false">No disponible</option>
+                </select>
+                <samp *ngIf="formAddJuego.get('Dispon_Jueg')?.hasError('required') && formAddJuego.get('Dispon_Jueg')?.touched">
+                    * Se requiere una disponibilidad para el <strong>juego</strong>
+                </samp>
+            </div>
+
+            <div class="mb-3">
+              <label for="Img_Jueg" class="form-label">Link de la imagen del juego</label>
+              <input formControlName="Img_Jueg" type="text" class="form-control" id="Img_Jueg" placeholder="Link de la imagen del juego" readonly>
+              <samp *ngIf="formAddJuego.get('Img_Jueg')?.hasError('required') && formAddJuego.get('Img_Jueg')?.touched">
+                  * Se requiere un tiempo de renta para el <strong>juego</strong>
+              </samp>
+            </div>
+
+              <div class="grupoBotones">
+                <button [disabled]="formAddJuego.invalid" type="submit" class="botonAgreMod">Guardar</button>
+              </div>
+
+            </form>
+
+          </div>
+
+
+        <!--Botones para guardar la informacion del empleado-->
+    </div>
+
+</div>
+<div>
+    <p>Juegos</p>
+</div>

@@ -1,0 +1,59 @@
+<!--<p>lista-juego works!</p>-->
+
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div clss="principalContenedor" >
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+        <h1 class="Examiner">Ventas</h1>
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/empleado/home-e">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+        </div>
+       <!--Tabla-->
+<div class="contenedorTabla">
+  <table class="styled-table" *ngIf="ListVenta.length > 0">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Cantidad Vendida</th>
+        <th scope="col">Total Vendido</th>
+        <th scope="col">Producto</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ListVenta">
+        <td>{{item.id}}</td>
+        <td>{{ item.Cant_vent }}</td>
+        <td>{{item.TotalVent | currency}}</td>
+        <td>{{ item.Nom_Prod }}</td>
+        <td>
+          <button type="button" class="btn btn-primary btn-success btn-sm" routerLink="/empleado/venta-e-edit/{{item.id}}">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </td>
+        <td>
+          <button (click)="deleteVentas(item.id!)" type="button" class="btn btn-primary btn-danger btn-sm">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h6 *ngIf="ListVenta.length == 0">Upps! No hay Ventas para mostrar</h6>
+</div>
+<div>
+  <button class="botonesAgregar" routerLink="/empleado/venta-e">
+      Agregar Venta
+  </button>
+</div>
+</div>
+
+</div>

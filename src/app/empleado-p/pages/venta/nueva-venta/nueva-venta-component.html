@@ -1,0 +1,62 @@
+<!--<p>nueva-sucursal works!</p>-->
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div clss="principalContenedor">
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/empleado/home-e">
+                    <mat-icon>home</mat-icon>
+                </button>
+                <button class="botonNavegacion" routerLink="/empleado/ventas-e">
+                    <mat-icon>undo</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!--Contenedor del formulario-->
+
+             <div class="contenedorInfo">
+                <form [formGroup]="formAddVenta" (ngSubmit)="addVenta()">
+
+                    <h3 >{{operation}} Venta</h3>
+                    <div class="mb-3">
+                        <label class="form-label">Cantidad de Venta</label>
+                        <input formControlName="Cant_vent" type="number" class="form-control"  placeholder="Ingresa La cantidad de Venta">
+                        <samp *ngIf="formAddVenta.get('Cant_vent')?.hasError('required') && formAddVenta.get('Cant_vent')?.touched">El Campo del nombre de la cantidad de venta<strong>Es requerido</strong></samp>
+                 
+                    <div class="mb-3">
+
+                        <label class="form-label">IDProducto</label>
+                        <select formControlName="IDProducto" class="form-control">
+                        <option value="" disabled>Seleccione un Producto</option>
+                        <option *ngFor="let items of productos" [value]="items.id">{{items.Nom_Prod}}</option>
+                        </select>
+                    </div>
+                   
+
+
+
+            </div>
+
+
+
+
+        <!--Botones para guardar la informacion del empleado-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button [disabled]="formAddVenta.invalid" type="submit"class="botonAgreMod">
+                    <mat-icon>add</mat-icon>
+                    Agregar
+                </button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+<!--Modales-->
+
+  </div>

@@ -1,0 +1,43 @@
+<!--<p>lista-sucursal works!</p>-->
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div clss="principalContenedor">
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+        <h1 class="Examiner">Sucursales</h1>
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/empleado/home-e">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!--Tabla-->
+        <div class="contenedorTabla">
+            <table *ngIf="listSucursal.length > 0" class="styled-table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre Sucursal</th>
+                    <th scope="col">Localización</th>
+                    <th scope="col">Detalles</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of listSucursal">
+                    <td> {{ item.id }} </td>
+                    <td> {{ item.Nom_Suc }} </td>
+                    <td> {{ item.Loc_Suc }} </td>
+                    <td> {{ item.Des_Suc }} </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h6 *ngIf="listSucursal.length == 0">Upps! No hay sucursales para mostrar</h6>
+        </div>
+
+    </div>
+
+</div>

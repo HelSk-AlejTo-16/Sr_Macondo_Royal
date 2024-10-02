@@ -1,0 +1,89 @@
+<!--<p>nueva-sucursal works!</p>-->
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div class="principalContenedor">
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+        <h1 class="Examiner">Producto</h1>
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/empleado/home-e">
+                    <mat-icon>home</mat-icon>
+                </button>
+                <button class="botonNavegacion" routerLink="/empleado/productos-e">
+                    <mat-icon>undo</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!--Contenedor del formulario-->
+
+             <div class="contenedorInfo">
+                <form [formGroup]="form" (ngSubmit)="addProducto()">
+
+                    <h3 >{{operation}} Productos</h3>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre del producto</label>
+                        <input formControlName="Nom_Prod" type="text" class="form-control"  placeholder="Ingresa el nombre del Producto">
+                        <span *ngIf="(form.get('Nom_Prod')?.hasError('required') && form.get('Nom_Prod')?.touched) || form.get('Nom_Prod')?.hasError('maxLength')">El Campo del nombre del producto  <strong>Es requerido</strong> y no debe sobrepasar los 40 caracteres</span>
+                    <div class="mb-3">
+                        <label class="form-label">Tipo de Producto</label>
+                        <select formControlName="Tipo_Prod" class="selectorSA">
+                            <option value="" disabled>Seleccione un Producto</option>
+                            <option *ngFor="let items of tproductos" [value]="items.id">{{items.Tipo_Prod}}</option>
+                            </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Imagen del producto</label>
+                        <input formControlName="Link_img" type="text" class="form-control"  placeholder="Imagen">
+                        <span *ngIf="(form.get('Link_img')?.hasError('required')&& form.get('Link_img')?.touched) || form.get('Link_img')?.hasError('maxLength') " >El Campo del Tipo  <strong>Es requerido</strong> y no debe sobrepasar los 1000 caracteres</span>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Existencia del Producto</label>
+                        <input formControlName="Exist_Prod" type="number" class="form-control"  placeholder="Existencia del producto">
+                        <span *ngIf="form.get('Exist_Prod')?.hasError('required') && form.get('Exist_Prod')?.touched">El Campo de las existencias <strong>Es requerido</strong></span>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Precio Producto</label>
+                        <input formControlName="Prec_Prod" type="number" class="form-control" placeholder="Precio del producto">
+                        <span *ngIf="form.get('Prec_Prod')?.hasError('required')&& form.get('Prec_Prod')?.touched">El Campo del precio  <strong>Es requerido</strong></span>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Descuento Producto</label>
+                        <input formControlName="Desc_Prod" type="number" class="form-control"  placeholder="Descuento del producto">
+                        <span *ngIf="form.get('Desc_Prod')?.hasError('required')&& form.get('Desc_Prod')?.touched">El Campo del descuento <strong>Es requerido</strong></span>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Sucursal</label>
+                        <select formControlName="IDSucursal" class="selectorSA">
+                            <option value="" disabled>Selecione una sucursal</option>
+                            <option *ngFor="let item of sucursales" [value]="item.id">{{item.Nom_Suc}}</option>
+                            <!--<option *ngFor="let sucursal of sucursales" [value]="sucursal.id">{{sucursal.sucursal}}</option>-->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Distribuidor</label>
+                        <select formControlName="IDDistribuidor" class="selectorSA">
+                            <option value="" disabled>Selecione un distribuidor</option>
+                            <option *ngFor="let item of distribuidores" [value]="item.id">{{item.Nom_Distr}}</option>
+                            <!--<option *ngFor="let sucursal of sucursales" [value]="sucursal.id">{{sucursal.sucursal}}</option>-->
+                        </select>
+                    </div>
+
+
+            </div>
+
+
+
+
+        <!--Botones para guardar la informacion del empleado-->
+            <div class="grupoBotones">
+                <button [disabled]="form.invalid" type="submit"class="botonAgreMod">
+                    Guardar
+                </button>
+            </div>
+    </form>
+    </div>
+</div>
+  </div>

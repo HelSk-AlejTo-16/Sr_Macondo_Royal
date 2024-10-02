@@ -1,0 +1,59 @@
+<!--<p>acerca-de works!</p>-->
+<link rel="stylesheet" href="../../../../css/home.css">
+<!--Contenedor donde vendra todo lo relacionado a acerca de-->
+<div class="contenedorHome">
+    <div class="backgroundHome">
+
+        <!--Titulo del apartado-->
+        <div class="encabezados">
+            <h1 class="Examiner">Acerca de Sr. Macondo</h1>
+        </div>
+
+        <!--Botones de navegacion a home-->
+        <div class="contenedorRegresar">
+            <button class="botonNavegacion" routerLink="/sr-macondo/avisame">
+                <mat-icon>notifications</mat-icon>
+            </button>
+            <button class="botonNavegacion" routerLink="/sr-macondo/tienda">
+                <mat-icon>home</mat-icon>
+            </button>
+        </div>
+
+        <h5 class="balsamiq-sans-regular">Cuenta para transferencia</h5>
+        <!-- Para agregar la informacion del banco-->
+
+        <p>Ahora paga con tu banca electrónica</p>
+        <div class="contenedorDiv">
+            <div class="contenedorDiv">
+                <div class="cuadroBanco">
+                  <div class="contenedorAcercaDe">
+                    <p>Banco: </p>
+                    <p class="recuadro">{{ formDato.get('Banc_Nom')?.value }}</p>
+                  </div>
+
+                  <div class="contenedorAcercaDe">
+                    <p>Cuenta interbancaria: </p>
+                    <p class="recuadro">{{ formDato.get('Clabe_InterBanc')?.value }}</p>
+                  </div>
+
+                  <div class="contenedorAcercaDe">
+                    <p>Número de cuenta: </p>
+                    <p class="recuadro">{{ formDato.get('Num_Cuenta')?.value }}</p>
+                  </div>
+
+                </div>
+
+                <div class="cuadroBanco">
+                  <p>QR:</p>
+                  <img class="imagenQr" [src]="formDato.get('Img_QR')?.value" alt="QR Code">
+                </div>
+            </div>
+        </div>
+
+        <div class="separador"></div>
+        <h5 class="balsamiq-sans-regular">Historia de la Empresa</h5>
+        <!-- Para agregar la informacion del negocio, su historia y otras cosas-->
+        <div>
+          <p class="justificado">{{ formDato.get('Info_Empresa')?.value }}</p>
+    </div>
+</div>
