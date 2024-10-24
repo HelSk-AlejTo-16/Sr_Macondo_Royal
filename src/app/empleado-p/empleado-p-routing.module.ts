@@ -10,6 +10,7 @@ import { ListaProductoComponent } from './pages/producto-e/lista-producto/lista-
 import { NuevoProductoComponent } from './pages//producto-e/nuevo-producto/nuevo-producto.component';
 import { ListaVentaComponent } from './pages/venta/lista-venta/lista-venta.component';
 import { NuevaVentaComponent } from './pages/venta/nueva-venta/nueva-venta.component';
+import { ListaMenuuComponent } from './pages/menu/lista-venta/menu.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,8 @@ const routes: Routes = [
     },
     {path:'add',component:NuevoProductoComponent},
     {path:'edit/:id',component:NuevoProductoComponent},
+
+    {path:'meat',component:ListaMenuuComponent},
     {
       path: '',
       redirectTo: 'home-e',

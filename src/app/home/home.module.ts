@@ -19,6 +19,7 @@ import { ListaMenuComponent } from './pages/listas/lista-menu/lista-menu.compone
 import { FilterProductsByTypePipe } from '../pipes/filterProductsByType.pipe';
 import { MapaComponent } from './pages/mapa/mapa.component';
 import { MapsModule } from "../maps/maps.module";
+import { FacebookService } from '../services/facebook-sdk.service';
 
 
 @NgModule({
@@ -36,14 +37,20 @@ import { MapsModule } from "../maps/maps.module";
     ListaJuegoComponent,
     ListaMenuComponent,
     FilterProductsByTypePipe,
-    MapaComponent
+    MapaComponent,
+    
     
   ],
+  providers :[
+    FacebookService
+  ],
+
   imports: [
     CommonModule,
     HomeRoutingModule,
     MaterialModule,
-    MapsModule
+    MapsModule,
+    
 ]
 })
 export class HomeModule { }

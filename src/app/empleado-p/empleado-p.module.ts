@@ -24,6 +24,8 @@ import { ListaVentaComponent } from './pages/venta/lista-venta/lista-venta.compo
 import { NuevaVentaComponent } from './pages/venta/nueva-venta/nueva-venta.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SucursalImagePipe } from '../pipes/sucursal-image.pipe';
+import { ListaMenuuComponent } from './pages/menu/lista-venta/menu.component';
+import { ThemealdbService } from '../services/themealdb.service';
 
 
 
@@ -44,7 +46,10 @@ import { SucursalImagePipe } from '../pipes/sucursal-image.pipe';
     NuevoProductoComponent,
     ListaVentaComponent,
     NuevaVentaComponent,
-    SucursalImagePipe
+    SucursalImagePipe,
+    ListaMenuuComponent,
+   
+    
   
     
     

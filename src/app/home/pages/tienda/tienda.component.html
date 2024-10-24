@@ -31,34 +31,55 @@
         <div class="texto-centro">Juegos</div>
       </div>
     </div>
-
-
   </div>
 
-    <!--Apartado lateral donde se estan los botones de acceder a las paginas: acerca de, notificame-->
-    <div class="contenedorLateral">
-        <div class="backgroundTiendaLateral">
-            <div class="subLateralTienda">
-                Bienvenido
-            </div>
-            <div class="botonesLateralesGrupo">
-                <!--Boton que lleva a la pagina acerca de-->
-                <button class="botonLateral" routerLink="/sr-macondo/acerca-de">
-                    <mat-icon>info</mat-icon>
-                    Acerca de
-                </button>
-                <!--Boton que va a el servicio de solicitud de noticias de sr. Macondo-->
-                <button class="botonLateral" routerLink="/sr-macondo/avisame">
-                    <mat-icon>notifications</mat-icon>
-                    Notifícame
-                </button>
-                <button class="botonLateral" routerLink="/sr-macondo/mapa">
-                  <mat-icon>map</mat-icon>
-                 Localizate
-              </button>
-            </div>
-        </div>
+  <br>
+
+  <!--Apartado lateral donde se estan los botones de acceder a las paginas: acerca de, notificame-->
+  <div class="contenedorLateral">
+    <div class="backgroundTiendaLateral">
+      <div class="subLateralTienda">Bienvenido</div>
+      <div class="botonesLateralesGrupo">
+        <!--Boton que lleva a la pagina acerca de-->
+        <button class="botonLateral" routerLink="/sr-macondo/acerca-de">
+          <mat-icon>info</mat-icon> Acerca de
+        </button>
+        <!--Boton que va a el servicio de solicitud de noticias de sr. Macondo-->
+        <button class="botonLateral" routerLink="/sr-macondo/avisame">
+          <mat-icon>notifications</mat-icon> Notifícame
+        </button>
+        <button class="botonLateral" routerLink="/sr-macondo/mapa">
+          <mat-icon>map</mat-icon> Localizate
+        </button>
+        
+      </div>
     </div>
+  </div>
 </div>
 
+<!-- Otros elementos de tu página -->
 
+<div class="contenedorProductos">
+  <div class="encabezados">
+    <h1 class="Examiner">Nuestras redes sociales!</h1>
+  </div>
+
+  <!-- Plugin de Facebook con el enlace actualizado al perfil de Señor Macondo -->
+  <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61566862016197" data-tabs="timeline,events,messages" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+    <blockquote cite="https://www.facebook.com/profile.php?id=61566862016197" class="fb-xfbml-parse-ignore">
+      <a href="https://www.facebook.com/profile.php?id=61566862016197">Señor Macondo</a>
+    </blockquote>
+  </div>
+
+  <!-- Botón para iniciar sesión en Facebook -->
+  <div class="login-section">
+    <button (click)="loginWithFacebook()">Iniciar sesión con Facebook</button>
+  </div>
+
+  <!-- Mostrar los datos del usuario si ha iniciado sesión -->
+  <div *ngIf="userData">
+    <h2>Bienvenido, {{ userData.name }}</h2>
+    <p>Email: {{ userData.email }}</p>
+    <img [src]="userData.picture.data.url" alt="Foto de perfil">
+  </div>
+</div>

@@ -7,26 +7,24 @@ import { environment } from "../../../environment/environment";
 })
 export class DirectionsApiClient extends HttpClient {
 
-    public baseUrl: string ='https://api.mapbox.com/directions/v5/mapbox/driving';
+    public baseUrl: string = 'https://api.mapbox.com/directions/v5/mapbox/driving';
 
-    constructor( handler: HttpHandler){
+    constructor(handler: HttpHandler) {
         super(handler);
     }
     
-    public override get<T>(url: string,){     
-
+    public override get<T>(url: string) {     
         url = this.baseUrl + url;
 
-        return super.get<T>(url,{
+        return super.get<T>(url, {
             params: {
-                alternatives: false,
-                geometries:'geojson',
-                languaje: 'es',
-                overview: 'smplified',
-                steps: false,
-                access_token: environment.apiKey,
+                alternatives: 'false',          // Cambiado a string
+                geometries: 'geojson',
+                language: 'es',                 // Corregido 'languaje' a 'language'
+                overview: 'simplified',         // Corregido 'smplified' a 'simplified'
+                steps: 'false',                // Cambiado a string
+                access_token: environment.apiKey
             }
         });
-
     }
 }

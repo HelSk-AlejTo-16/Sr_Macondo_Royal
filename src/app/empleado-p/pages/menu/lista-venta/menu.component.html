@@ -1,0 +1,44 @@
+<!--<p>lista-juego works!</p>-->
+
+<link rel="stylesheet" href="../../../../../css/sa-contenido.css">
+
+<div clss="principalContenedor" >
+    <!--Fondo de color-->
+    <div class="fondoSA">
+        <!--Titulo-->
+        <h1 class="Examiner">Recetario:</h1>
+        <!--Botones de navegacion-->
+        <div class="contenedorBotones">
+            <div class="grupoBotones">
+                <button class="botonNavegacion" routerLink="/empleado/home-e">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+        </div>
+       <!--Tabla-->
+<div class="contenedorTabla">
+    <div class="search-container">
+        <input [(ngModel)]="searchTerm" placeholder="Buscar recetas" (input)="searchMeals()" />
+        <button (click)="searchMeals()">Buscar</button>
+      </div>
+      
+      <div *ngIf="meals && meals.length > 0; else noResults">
+        <ul>
+          <li *ngFor="let meal of meals">
+            <h3>{{ meal.strMeal }}</h3>
+            
+            <img [src]="meal.strMealThumb" alt="{{ meal.strMeal }}">
+          </li>
+        </ul>
+      </div>
+      
+      <ng-template #noResults>
+        <p *ngIf="searchTerm.trim() && meals.length === 0">No se encontraron recetas para "{{ searchTerm }}"</p>
+      </ng-template>
+      
+    
+      
+
+</div>
+
+</div>

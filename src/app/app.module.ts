@@ -14,6 +14,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AccederTokenInterceptor } from './utils/aceder-token.interceptor';
 import { Error401Component } from './componentes/error401/error401.component';
 import { MapsModule } from './maps/maps.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { MapsModule } from './maps/maps.module';
     Error401Component
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
@@ -33,6 +35,7 @@ import { MapsModule } from './maps/maps.module';
       timeOut: 5000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
+   
     }), // ToastrModule added
     MapsModule
   ],
