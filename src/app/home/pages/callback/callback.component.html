@@ -1,0 +1,46 @@
+<!--<p>acerca-de works!</p>-->
+<link rel="stylesheet" href="../../../../css/home.css">
+<!--Contenedor donde vendra todo lo relacionado a acerca de-->
+<div class="contenedorHome">
+    <div class="backgroundHome">
+
+        <!--Titulo del apartado-->
+        <div class="encabezados">
+            <h1 class="Examiner">Nuesta Playlist</h1>
+        </div>
+
+        <!--Botones de navegacion a home-->
+        <div class="contenedorRegresar">
+            <button class="botonNavegacion" routerLink="/sr-macondo/avisame">
+                <mat-icon>notifications</mat-icon>
+            </button>
+            <button class="botonNavegacion" routerLink="/sr-macondo/tienda">
+                <mat-icon>home</mat-icon>
+            </button>
+        </div>
+
+        <h5 class="balsamiq-sans-regular">Nuestra Playlist</h5>
+        <!-- Para agregar la informacion del banco-->
+
+
+        <div class="contenedoDiv">
+            <div *ngIf="!token">
+                <p>Redirigiendo para iniciar sesión en Spotify...</p>
+              </div>
+              
+              <div *ngIf="token">
+                <div>
+                  <input [(ngModel)]="query" placeholder="Busca una canción..." />
+                  <button (click)="search()">Buscar</button>
+                </div>
+              
+                <div *ngFor="let track of tracks">
+                  <p>{{ track.name }} - {{ track.artists[0].name }}</p>
+                  <button (click)="addTrack(track.uri)">Agregar a Playlist</button>
+                </div>
+              </div>
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2yR6PBZjVGZS3illlHi1Ca?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              
+              
+        </div>
+</div>

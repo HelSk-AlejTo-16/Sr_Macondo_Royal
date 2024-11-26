@@ -1,0 +1,30 @@
+<div class="instagram-feed-container">
+    <div class="header">
+      <h2>Últimas Publicaciones de Instagram</h2>
+      <button class="back-button" (click)="goToHome()">
+        <i class="fas fa-home"></i> Regresar a Inicio
+      </button>
+    </div>
+  
+    <div *ngIf="isLoading" class="loading">
+      Cargando publicaciones...
+    </div>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  
+    <div *ngIf="!isLoading && !errorMessage" class="instagram-feed">
+      <div *ngFor="let media of instagramMedia" class="media-item">
+        <a [href]="media.permalink" target="_blank">
+          <img *ngIf="media.media_type === 'IMAGE' || media.media_type === 'CAROUSEL_ALBUM'"
+               [src]="media.media_url" alt="Instagram image" />
+          <video *ngIf="media.media_type === 'VIDEO'" controls>
+            <source [src]="media.media_url" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="caption">{{ media.caption }}</p>
+        </a>
+      </div>
+    </div>
+  </div>

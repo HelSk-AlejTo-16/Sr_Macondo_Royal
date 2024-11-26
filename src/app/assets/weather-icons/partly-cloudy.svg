@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="35" cy="40" r="15" fill="#FFD700"/>
+  <g fill="#E6E6E6">
+    <path d="M45,50 Q60,35 75,50 Q90,65 60,65 Q45,65 45,50">
+      <animate attributeName="d" 
+        values="M45,50 Q60,35 75,50 Q90,65 60,65 Q45,65 45,50;
+                M45,52 Q60,37 75,52 Q90,67 60,67 Q45,67 45,52;
+                M45,50 Q60,35 75,50 Q90,65 60,65 Q45,65 45,50" 
+        dur="3s" 
+        repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

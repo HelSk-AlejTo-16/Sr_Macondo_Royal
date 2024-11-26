@@ -20,6 +20,8 @@ import { FilterProductsByTypePipe } from '../pipes/filterProductsByType.pipe';
 import { MapaComponent } from './pages/mapa/mapa.component';
 import { MapsModule } from "../maps/maps.module";
 import { FacebookService } from '../services/facebook-sdk.service';
+import { CallbackComponent } from './pages/callback/callback.component';
+import { ChatbotComponent } from './pages/chatbot/chatbot.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { FacebookService } from '../services/facebook-sdk.service';
     ListaMenuComponent,
     FilterProductsByTypePipe,
     MapaComponent,
+    CallbackComponent,
+    ChatbotComponent
     
     
   ],

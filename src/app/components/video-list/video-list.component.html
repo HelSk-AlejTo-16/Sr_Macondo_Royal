@@ -1,0 +1,62 @@
+<div class="main-container">
+    <header class="header">
+      <button class="home-button" (click)="goToHome()">
+        <span class="home-icon">←</span> Volver al Inicio
+      </button>
+      <h1>Recetas en Video</h1>
+      <div class="search-bar">
+        <input 
+          type="text" 
+          [(ngModel)]="searchQuery" 
+          placeholder="Buscar recetas..."
+          (keyup.enter)="searchRecipes()"
+        >
+        <button (click)="searchRecipes()">Buscar</button>
+      </div>
+    </header>
+  
+    <div class="categories">
+      <button 
+        *ngFor="let category of categories"
+        [class.active]="selectedCategory === category"
+        (click)="onCategorySelect(category)"
+        class="category-btn">
+        {{ category | titlecase }}
+      </button>
+    </div>
+  
+    <div class="content-container">
+      <div class="video-list">
+        <div class="loading-spinner" *ngIf="loading">
+          <div class="spinner"></div>
+        </div>
+        
+        <div class="videos-grid" *ngIf="!loading">
+          <div *ngFor="let video of videos" 
+               class="video-card" 
+               (click)="selectVideo(video)">
+            <div class="thumbnail">
+              <img [src]="video.snippet.thumbnails.medium.url" 
+                   [alt]="video.snippet.title">
+              <div class="play-overlay">
+                <span class="play-icon">▶</span>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>{{ video.snippet.title }}</h3>
+              <p>{{ video.snippet.channelTitle }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-player-section" *ngIf="selectedVideo">
+        <app-video-player [videoId]="selectedVideo.id.videoId"></app-video-player>
+        <div class="video-details">
+          <h2>{{ selectedVideo.snippet.title }}</h2>
+          <p class="channel-name">{{ selectedVideo.snippet.channelTitle }}</p>
+          <p class="description">{{ selectedVideo.snippet.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

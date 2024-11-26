@@ -26,7 +26,7 @@ export class FacebookService {
   initFB() {
     (window as any).fbAsyncInit = () => {
       (window as any).FB.init({
-        appId: '1053068579592012',  // Asegúrate de que este sea tu App ID correcto
+        appId: '1053068579592012',  
         cookie: true, // Habilitar cookies para gestionar la sesión
         xfbml: true,
         version: 'v21.0'

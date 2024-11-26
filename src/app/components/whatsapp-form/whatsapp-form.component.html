@@ -1,0 +1,54 @@
+<div class="whatsapp-form">
+    <h2>Enviar Mensaje WhatsApp</h2>
+    <div class="form-group">
+      <label for="phone">Número de Teléfono:</label>
+      <input 
+        type="text" 
+        id="phone" 
+        [(ngModel)]="phoneNumber" 
+        placeholder="Ej: 9991234567 (sin +52)"
+      >
+      <small class="help-text">Ingresa solo los números, sin espacios ni caracteres especiales</small>
+    </div>
+    <div class="form-group">
+      <label for="message">Mensaje:</label>
+      <textarea 
+        id="message" 
+        [(ngModel)]="message" 
+        placeholder="Escribe tu mensaje aquí"
+      ></textarea>
+    </div>
+    <button (click)="sendMessage()" [disabled]="sending">
+      {{ sending ? 'Enviando...' : 'Enviar Mensaje' }}
+    </button>
+    <div *ngIf="status" [class]="'status ' + status.type">
+      {{ status.message }}
+    </div>
+  
+    <!-- Historial de mensajes -->
+    <div class="history-section">
+      <button class="history-toggle" (click)="toggleHistory()">
+        {{ showHistory ? 'Ocultar Historial' : 'Mostrar Historial' }}
+      </button>
+      
+      <div *ngIf="showHistory" class="message-history">
+        <h3>Historial de Mensajes</h3>
+        <div *ngIf="messageHistory.length === 0" class="no-messages">
+          No hay mensajes enviados aún
+        </div>
+        <div *ngFor="let msg of messageHistory" class="history-item" [class.error]="msg.status === 'error'">
+          <div class="history-header">
+            <span class="phone">📱 {{msg.phoneNumber}}</span>
+            <span class="timestamp">🕒 {{formatDate(msg.timestamp)}}</span>
+          </div>
+          <div class="message-content">{{msg.message}}</div>
+          <div *ngIf="msg.status === 'error'" class="error-message">
+            ❌ Error: {{msg.error}}
+          </div>
+          <div *ngIf="msg.status === 'sent'" class="success-message">
+            ✅ Enviado
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

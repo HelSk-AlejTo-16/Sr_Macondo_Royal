@@ -7,4 +7,18 @@
         "^/api": ""
       }
     }
-  }
+     ,
+      "/translate": {
+        "target": "https://api.mymemory.translated.net",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+          "^/translate": ""
+        }
+      }
+    }
+    
+  
+  
+    
+  

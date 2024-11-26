@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#E6E6E6" stroke-width="3">
+    <line x1="25" y1="40" x2="75" y2="40">
+      <animate attributeName="x2" values="75;70;75" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="25" y1="50" x2="75" y2="50">
+      <animate attributeName="x2" values="75;80;75" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="25" y1="60" x2="75" y2="60">
+      <animate attributeName="x2" values="75;70;75" dur="3s" repeatCount="indefinite"/>
+    </line>
+  </g>
+</svg>

@@ -16,28 +16,48 @@
             </div>
         </div>
        <!--Tabla-->
-<div class="contenedorTabla">
-    <div class="search-container">
-        <input [(ngModel)]="searchTerm" placeholder="Buscar recetas" (input)="searchMeals()" />
-        <button (click)="searchMeals()">Buscar</button>
-      </div>
-      
-      <div *ngIf="meals && meals.length > 0; else noResults">
-        <ul>
-          <li *ngFor="let meal of meals">
-            <h3>{{ meal.strMeal }}</h3>
-            
-            <img [src]="meal.strMealThumb" alt="{{ meal.strMeal }}">
-          </li>
-        </ul>
-      </div>
-      
-      <ng-template #noResults>
-        <p *ngIf="searchTerm.trim() && meals.length === 0">No se encontraron recetas para "{{ searchTerm }}"</p>
-      </ng-template>
-      
+       <div class="contenedorTabla">
+        <div class="search-container">
+            <input [(ngModel)]="searchTerm" 
+                   placeholder="Buscar recetas" 
+                   (keyup.enter)="searchRecipes()"
+                   [disabled]="loading"/>
+            <button (click)="searchRecipes()" 
+                    [disabled]="loading">
+                {{ loading ? 'Buscando...' : 'Buscar' }}
+            </button>
+           
+        </div>
     
-      
+        <!-- Mensaje de error -->
+        <div *ngIf="error" class="error-message">
+            {{ error }}
+        </div>
+    
+        <!-- Loading spinner -->
+        <div *ngIf="loading" class="loading-spinner">
+            <p>Cargando recetas...</p>
+        </div>
+    
+        <!-- Resultados -->
+        <div *ngIf="recipes && recipes.length > 0" class="recipes-grid">
+            <div *ngFor="let recipe of recipes" class="recipe-card">
+                <h3>{{ recipe.title }}</h3>
+                <div class="recipe-details">
+                    <p><strong>Porciones:</strong> {{ recipe.servings }}</p>
+                    <h4>Ingredientes:</h4>
+                    <p>{{ recipe.ingredients }}</p>
+                    <h4>Instrucciones:</h4>
+                    <p>{{ recipe.instructions }}</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mensaje cuando no hay resultados -->
+        <div *ngIf="searchTerm && !loading && recipes.length === 0" class="no-results">
+            <p>No se encontraron recetas para "{{ searchTerm }}"</p>
+        </div>
+    </div>
 
 </div>
 

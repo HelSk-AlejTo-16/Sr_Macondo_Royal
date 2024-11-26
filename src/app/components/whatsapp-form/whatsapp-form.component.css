@@ -1,0 +1,127 @@
+.whatsapp-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .help-text {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+  }
+  
+  .status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .status.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Estilos para el historial */
+  .history-section {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+  
+  .history-toggle {
+    background-color: #075e54;
+    margin-bottom: 15px;
+  }
+  
+  .message-history {
+    margin-top: 15px;
+  }
+  
+  .history-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .history-item.error {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .message-content {
+    margin: 10px 0;
+    white-space: pre-wrap;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+  }
+  
+  .success-message {
+    color: #28a745;
+    font-size: 0.9em;
+  }
+  
+  .no-messages {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    font-style: italic;
+  }
