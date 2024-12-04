@@ -8,7 +8,7 @@ const spotifyApi = new SpotifyWebApi();
 })
 export class SpotifyAuthService {
   private clientId = 'a9b80a8663784690b3102718e2e1cfb0';
-  private redirectUri = 'http://localhost:4200/sr-macondo/callback';
+  private redirectUri = 'https://sr-macondo.web.app/sr-macondo/callback';
   private scope = 'user-read-private user-read-email playlist-modify-private';
 
   constructor() {}

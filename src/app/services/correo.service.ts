@@ -15,7 +15,7 @@ export class CorreoService {
 
   constructor(private http:HttpClient) {
     this.myappUrl = environment.endpoint;
-    this.myapiUrl = 'api/correos/'
+    this.myapiUrl = '/api/correos/'
   }
 
   saveCorreo(correo:Correo):Observable<void>{

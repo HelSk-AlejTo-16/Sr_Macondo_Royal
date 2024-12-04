@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    endpoint: 'http://localhost:3000/',
+    endpoint: 'https://serverjsdonmacondo-production.up.railway.app/',
     clientId:'ASHEBlUPjT9u_rD5k5JxLIPCZc2pukhRfgaPI8tQ98dRKTb8C3tVe5ejOhY_Wuukoz-y9f9-Df8-nAdh',
     apiKey: 'pk.eyJ1IjoiYWxlbGVvMTgiLCJhIjoiY20xZ3FlNXdiMDZqcjJrcG93Mndub2w2eSJ9.x3BQvkHb-poOSbmNCEk4Yg',
     
