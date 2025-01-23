@@ -39,6 +39,7 @@
     "ngx-toastr": "^15.2.2",
     "rxjs": "~7.8.0",
     "spotify-web-api-js": "^1.5.2",
+    "supertokens-web-js": "^0.14.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },

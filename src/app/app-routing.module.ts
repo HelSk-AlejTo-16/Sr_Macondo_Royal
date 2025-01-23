@@ -49,10 +49,12 @@ const routes: Routes = [
     pathMatch: 'full'
 
   },
+  
   {
-    path :'**',
-    redirectTo:'404'
-  }
+    path: "**",
+    loadChildren: () => import("./home/home.module").then((m) => m.HomeModule),
+  },
+
 ];
 
 @NgModule({
